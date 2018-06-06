@@ -1,0 +1,21 @@
+rpcinfo
+sudo apt-get install rpcbind 
+
+tushar@ubuntu:~$ cd Desktop/ekdum/rpc 
+tushar@ubuntu:~/Desktop/ekdum/rpc$ rpcgen -a -C fact.x
+tushar@ubuntu:~/Desktop/ekdum/rpc$ make -f Makefile.fact
+
+
+/////WRITE CODE
+
+tushar@ubuntu:~/Desktop/ekdum/rpc$ make -f Makefile.fact
+
+changes in the makefile--->>>
+CFLAGS += -g -DRPC_SVC_FG
+RPCGENFLAGS = -C
+
+tushar@ubuntu:~/Desktop/ekdum/rpc$ sudo ./fact_server
+
+AT CLIENT SIDE:
+
+tushar@ubuntu:~/Desktop/ekdum/rpc$ sudo ./fact_client localhost

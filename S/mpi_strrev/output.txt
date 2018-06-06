@@ -1,0 +1,19 @@
+sudo apt-get install libopenmpi-dev
+sudo apt-get install openmpi -bin
+
+
+tushar@ubuntu:~$ cd Desktop/ekdum
+tushar@ubuntu:~/Desktop/ekdum$ cd mpi
+tushar@ubuntu:~/Desktop/ekdum/mpi$ mpicc Server.c -o Server
+tushar@ubuntu:~/Desktop/ekdum/mpi$ mpicc Client.c -o Client
+tushar@ubuntu:~/Desktop/ekdum/mpi$ mpirun -np 1 ./Server
+Server available at port: 249364480.0;tcp://192.168.72.131:36495+249364481.0;tcp://192.168.72.131::300
+
+
+
+//////AT CLIENT SIDE
+
+
+tushar@ubuntu:~/Desktop/ekdum/mpi$ mpirun -np 1 ./Client '249364480.0;tcp://192.168.72.131:36495+249364481.0;tcp://192.168.72.131::300'
+
+

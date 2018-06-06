@@ -1,0 +1,34 @@
+
+Servant:first terminal
+
+[student@localhost ~]$ cd
+[student@localhost ~]$ cd Documents
+[student@localhost Documents]$ cd DS
+[student@localhost DS]$ javac ServerInterface.java
+[student@localhost DS]$ javac Servant.java
+[student@localhost DS]$ javac Server.java
+[student@localhost DS]$ javac client.java
+javac: file not found: client.java
+Usage: javac <options> <source files>
+use -help for a list of possible options
+[student@localhost DS]$ javac Client.java
+[student@localhost DS]$ rmic Servant
+[student@localhost DS]$ rmiregistry
+
+Server:-2
+[student@localhost DS]$ java Server
+
+Client:-3
+[student@localhost DS]$ java Client
+Enter the server address :
+localhost
+Enter First String :
+svpm
+Enter Second String :
+coe
+Concatenated string :svpmcoe
+[student@localhost DS]$ 
+
+
+
+
